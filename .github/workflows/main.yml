@@ -16,4 +16,4 @@ jobs:
       - name: Create deploy folder on host
         run: ssh -o StrictHostKeyChecking=no -i ~/id_rsa ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} "mkdir -p ~/sites/gorbostudios.com"
       - name: Secure copy code to host
-        run: cd $GITHUB_WORKSPACE && rsync -e "ssh -o StrictHostKeyChecking=no -i ~/id_rsa" -r ./ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/sites/gorbostudios.com
+        run: cd $GITHUB_WORKSPACE && rsync -e "ssh -o StrictHostKeyChecking=no -i ~/id_rsa" -r ./ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/sites/gorbostudios.com/
