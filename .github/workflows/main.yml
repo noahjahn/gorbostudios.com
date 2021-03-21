@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Create SSH private key
+        run: echo "${{ secrets.DEPLOY_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+      - name: Secure copy code to host
+        run: scp -R ./ ${{ secrets.DEPLOY_USER }}.${{ secrets.DEPLOY_HOST }}:~/sites/gorbostudios.com/
