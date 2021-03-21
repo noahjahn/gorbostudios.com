@@ -16,4 +16,4 @@ jobs:
       - name: Create SSH private key
         run: echo "${{ secrets.DEPLOY_PRIVATE_KEY }}" > ~/.ssh/id_rsa
       - name: Secure copy code to host
-        run: scp -r ./ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/sites/gorbostudios.com/
+        run: scp -i ~/.ssh/id_rsa -r ./ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/sites/gorbostudios.com/
