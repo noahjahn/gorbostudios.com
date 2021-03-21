@@ -1,0 +1,46 @@
+:root {
+    --black: #1E1E1E;
+    --white: #F1F1F1;
+    --purple: #6A4C93;
+    --blue: #1982C4;
+    --red: #FF595E;
+    --green: #8AC926;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'VT323', monospace;
+    font-size: 3.5vw;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.text-purple {
+    color: var(--purple);
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.text-red {
+    color: var(--red);
+}
+
+.text-green {
+    color: var(--green);
+}
