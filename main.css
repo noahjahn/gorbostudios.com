@@ -44,3 +44,32 @@ body {
 .text-green {
     color: var(--green);
 }
+
+.logo {
+    width: 250px;
+    height: 250x; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 1;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--black);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
